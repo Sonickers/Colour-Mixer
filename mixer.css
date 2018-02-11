@@ -140,7 +140,7 @@ a {
 #C, #M {
 	color: black;
 	animation-name: changeColors;
-	animation-duration: 20s;
+	animation-duration: 10s;
 	animation-direction: alternate;
 	animation-iteration-count: infinite
 }
