@@ -3,17 +3,9 @@ body {
 	font-family: 'Amatic SC', cursive;
 }
 
-#div1, #div2, #div4, #div5, #div6  {
-	float: left;
-	width: 100px;
-	height: 35px;
-	margin: 10px;
-	padding: 10px;
-	/* border: 1px solid black;*/
-}
-#div2{
+#div2 {
 	padding: 45px 0 15px;
-	width: auto;
+	width: 100%;
 	border: 1px solid #ddd;
 }
 
@@ -33,7 +25,6 @@ body {
 	padding: 45px 0 15px;
 	width: 49%;
 }
-
 
 
 .fruits a, .vegetables a {
@@ -150,7 +141,7 @@ a {
 	100% { color: #eeac99; }
 }
 
-#C, #M {
+#S, #M {
 	color: black;
 	animation-name: changeColors;
 	animation-duration: 10s;
