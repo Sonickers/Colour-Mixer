@@ -18,6 +18,10 @@
 			var data = ev.dataTransfer.getData("text");
 			ev.target.appendChild(document.getElementById(data));
 		}
+
+		function shakeIt() {
+			document.getElementById('shaker').classList.toggle("active");
+		}
 	</script>
 </head>
 <body>
@@ -57,10 +61,14 @@
 
 			<div class="shaker">
 				<h1><span id="S">S</span>moothie <span id="M">M</span>aker</h1>
-				<img class="img-shaker" src="./images/Blender.png" width="550" height="600">
+				<img id="shaker" class="img-shaker" src="./images/Blender.png" width="550" height="600">
 				<h2>Your Ingredients:</h2>
 				<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-				<form><input class="btn" type=button value="Refresh" onClick="history.go()"></form> 
+				<form>
+					<input class="btn" type=button value="SHAKE IT!" onClick="shakeIt()">
+					<input class="btn" type=button value="Refresh" onClick="history.go()">
+				</form> 
+				
 			</div>
 			<div class="scroll">
 
