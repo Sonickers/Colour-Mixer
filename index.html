@@ -4,7 +4,21 @@
 	<link rel="stylesheet" type="text/css" href="/mixer.css">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
 	<title>Blender Smoothie Maker</title>
+	<script>
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
 
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
 </head>
 <body>
 	<div class="wrapper">
@@ -18,22 +32,33 @@
 				</div>
 
 				<div class="fruits">
-					<a href=""><img src="./images/fruits/Apple.png" width="150" height="150"></a>
-					<h4>#blabla</h4>
-					<a href=""><img src="./images/fruits/Banana.png" width="150" height="150"></a>
-					<h4>#blabla</h4>
-					<a href=""><img src="./images/fruits/Peaches.png" width="150" height="150"></a>
-					<h4>#blabla</h4>
-					<a href=""><img src="./images/fruits/Cherry.png" width="150" height="150"></a>
-					<h4>#blabla</h4>
-					<a href=""><img src="./images/fruits/Coconuts.png" width="150" height="150"></a>
-					<h4>#blabla</h4>
+
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img src="./images/fruits/Apple.png" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="150">
+					</div>
+
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img src="./images/fruits/Banana.png" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="150">
+					</div>
+
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img src="./images/fruits/Peaches.png" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="150">
+					</div>
+
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img src="./images/fruits/Cherry.png" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="150">
+					</div>
+
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img src="./images/fruits/Coconuts.png" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="150">
+					</div>
 				</div>
 			</div>
 
 			<div class="shaker">
 				<h1><span id="C">B</span>lender <span id="M">S</span>moothie <span id="M">M</span>aker</h1>
 				<img class="img-shaker" src="./images/Blender.png" width="550" height="600">
+				<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 			</div>
 			<div class="scroll">
 
@@ -61,3 +86,48 @@
 
 </body>
 </html>
+
+
+<!-- <!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1, #div2 {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<h2>Drag and Drop</h2>
+<p>Drag the image back and forth between the two div elements.</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="./images/Blender.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>
+ -->

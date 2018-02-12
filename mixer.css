@@ -4,6 +4,20 @@ body {
 
 }
 
+#div1,  {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+   /* border: 1px solid black;*/
+}
+#div2{
+	padding: 45px 0 15px;
+	width: 100%;
+	border: 1px solid #ddd;
+}
+
 .wrapper {
 	border: 6px double #ddd;
 	text-align: center;
@@ -177,4 +191,8 @@ h4, h3 {
 #btnContainer {
       width: auto;
       height: 10%;
+}
+
+#div1, #div2 {
+	cursor: pointer;
 }
