@@ -1,20 +1,19 @@
 body {
 	height: 100%;
 	font-family: 'Amatic SC', cursive;
-
 }
 
-#div1,  {
-    float: left;
-    width: 100px;
-    height: 35px;
-    margin: 10px;
-    padding: 10px;
-   /* border: 1px solid black;*/
+#div1, #div2, #div4, #div5, #div6  {
+	float: left;
+	width: 100px;
+	height: 35px;
+	margin: 10px;
+	padding: 10px;
+	/* border: 1px solid black;*/
 }
 #div2{
 	padding: 45px 0 15px;
-	width: 100%;
+	width: auto;
 	border: 1px solid #ddd;
 }
 
@@ -66,17 +65,17 @@ h1 {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+	width: 12px;
 }
- 
+
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	border-radius: 10px;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
 
@@ -189,8 +188,8 @@ h4, h3 {
 }
 
 #btnContainer {
-      width: auto;
-      height: 10%;
+	width: auto;
+	height: 10%;
 }
 
 #div1, #div2 {
