@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-	<link rel="stylesheet" type="text/css" href="/mixer.css">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="mixer.css"></li>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
 	<title>Smoothie Maker</title>
+
 	<script>
 		function allowDrop(ev) {
 			ev.preventDefault();
@@ -22,90 +26,156 @@
 			document.getElementById('shaker').classList.toggle("active");
 		}
 	</script>
+
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
+		<nav class="navbar navbar-light">
+			<ul>
+				<a></a>
+			</ul>
+			<ul>
+				<form class="form-inline">
+					<input class="form-control mr-sm-2 justify-content-left" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</ul>
+		</nav>
 
-		<div class="colour-mixer">
-			<div class="scroll">
-
-				<div id="BtnContainer">
-					<button class="btn active" onclick="filterSelection('all')">All</button>
-					<button class="btn" onclick="filterSelection('Green')">Fruits</button>
-					<button class="btn" onclick="filterSelection('Blue')">Vegetables</button>				
-				</div>
-
-				<div class="fruits">
-
-					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<img src="./images/fruits/Apple.png" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="150">
-					</div>
-
-					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<img src="./images/fruits/Banana.png" draggable="true" ondragstart="drag(event)" id="drag2" width="150" height="150">
-					</div>
-
-					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<img src="./images/fruits/Peaches.png" draggable="true" ondragstart="drag(event)" id="drag3" width="150" height="150">
-					</div>
-
-					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<img src="./images/fruits/Cherry.png" draggable="true" ondragstart="drag(event)" id="drag4" width="150" height="150">
-					</div>
-
-					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<img src="./images/fruits/Coconuts.png" draggable="true" ondragstart="drag(event)" id="drag5" width="150" height="150">
+		<div class="container">
+			<div class="row mt-2">
+				<div class="col-12 justify-content-center">
+					<div class="shaker justify-content-center">
+						<h1><span id="S">S</span>moothie <span id="M">M</span>aker<i class="fas fa-lemon"></i></h1>
 					</div>
 				</div>
 			</div>
 
-			<div class="shaker">
-				<div class="card-title">
-					<p span id="S">S</span>moothie <span id="M">M</span>aker</p>
-				</div>
-				<img id="shaker" class="img-shaker" src="./images/Blender.svg">
-				<h2>Your Ingredients:</h2>
-				<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-				<form>
-					<input class="btn" type=button value="SHAKE IT!" onClick="shakeIt()">
-					<input class="btn" type=button value="Refresh" onClick="history.go()">
-				</form> 
+			<div class="row mt-3">
+				<div class="col">
 
+					<div class="scroll">
+						<div id="row">							
+							<button class="btn active col-3" onclick="filterSelection('all')"><i class="fas fa-asterisk"></i> All</button>
+							<button class="btn col-4" onclick="filterSelection('Green')">Fruits</button>
+							<button class="btn col-4" onclick="filterSelection('Blue')">Vegetables</button>									
+						</div>
+						<div class="card text-center">
+							<div class="ingredients">
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/apple.png" draggable="true" ondragstart="drag(event)" id="drag1">
+									<p>#Apple</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/strawberry.png" draggable="true" ondragstart="drag(event)" id="drag2">
+									<p>#Strawberry</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/bananas.png" draggable="true" ondragstart="drag(event)" id="drag3">
+									<p>#Banana</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/avocado.png" draggable="true" ondragstart="drag(event)" id="drag4">
+									<p>#Avocado</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/pear.png" draggable="true" ondragstart="drag(event)" id="drag5">
+									<p>#Pear</p>
+								</div>
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/blackberry.png" draggable="true" ondragstart="drag(event)" id="drag6">
+									<p>#Blackberry</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/cherry.png" draggable="true" ondragstart="drag(event)" id="drag7">
+									<p>#Cherry</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/coconuts.png" draggable="true" ondragstart="drag(event)" id="drag8">
+									<p>#Coconut</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/grapefruit.png" draggable="true" ondragstart="drag(event)" id="drag9">
+									<p>#Grapefruit</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/kiwi.png" draggable="true" ondragstart="drag(event)" id="drag10">
+									<p>#Kiwi</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 justify-content-center">
+					<div class="shaker justify-content-center">
+						<div class="card card-shaker text-center">
+							<img id="shaker" class="img-shaker mt-5 mx-auto d-block" src="./images/Blender.png">
+						</div>
+						<h2>Your Ingredients:</h2>
+						<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<form>
+							<input class="btn" type=button value="SHAKE IT!" onClick="shakeIt()">
+							<input class="btn" type=button value="Refresh" onClick="history.go()">
+						</form> 
+
+
+					</div>
+				</div>
+				<div class="col">
+					<div class="scroll justify-content-center">
+
+						<div id="row">
+							<button class="btn active col-3" onclick="filterSelection('all')"><i class="fas fa-asterisk"></i> All</button>
+							<button class="btn col-4" onclick="filterSelection('Green')">Base</button>
+							<button class="btn col-4" onclick="filterSelection('Blue')">Other</button>				
+						</div>
+						<div class="card text-center">
+							<div class="ingredients">
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/milk.png" draggable="true" ondragstart="drag(event)" id="drag11">
+									<p>#Milk</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/spinach.png" draggable="true" ondragstart="drag(event)" id="drag12">
+									<p>#Spinach</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/chocolate.png" draggable="true" ondragstart="drag(event)" id="drag13">
+									<p>#Chocolate</p>
+								</div> 
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/honey.png" draggable="true" ondragstart="drag(event)" id="drag14">
+									<p>#Honey</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/cream-nut.png" draggable="true" ondragstart="drag(event)" id="drag15">
+									<p>#Cream-nut</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="scroll">
 
-				<div id="BtnContainer">
-					<button class="btn active" onclick="filterSelection('all')">All</button>
-					<button class="btn" onclick="filterSelection('Green')">Base</button>
-					<button class="btn" onclick="filterSelection('Blue')">Other</button>				
-				</div>
-
-				<div class="others">
-					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<img src="./images/fruits/Cherry.png" draggable="true" ondragstart="drag(event)" id="drag4" width="150" height="150">
-					</div>
-
-					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<img src="./images/fruits/Cherry.png" draggable="true" ondragstart="drag(event)" id="drag4" width="150" height="150">
-					</div>
-
-					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<img src="./images/fruits/Cherry.png" draggable="true" ondragstart="drag(event)" id="drag4" width="150" height="150">
-					</div> 
-
-					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<img src="./images/fruits/Cherry.png" draggable="true" ondragstart="drag(event)" id="drag4" width="150" height="150">
-					</div>
-
-					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-						<img src="./images/fruits/Cherry.png" draggable="true" ondragstart="drag(event)" id="drag4" width="150" height="150">
-					</div>
-				</div>
-
-			</div>
 		</div>
-
 	</div>
 
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
