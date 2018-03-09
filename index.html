@@ -15,12 +15,15 @@
 			ev.preventDefault();
 		}
 		function drag(ev) {
-			ev.dataTransfer.setData("text", ev.target.id);
+			ev.dataTransfer.setData('imgId', ev.target.id);
+			ev.dataTransfer.setData('titleId', ev.target.dataset.title_id);
 		}
 		function drop(ev) {
 			ev.preventDefault();
-			var data = ev.dataTransfer.getData("text");
-			ev.target.appendChild(document.getElementById(data));
+			var imgId = ev.dataTransfer.getData('imgId');
+			var titleId = ev.dataTransfer.getData('titleId');
+			ev.target.appendChild(document.getElementById(titleId));
+			ev.target.appendChild(document.getElementById(imgId));
 		}
 		function shakeIt() {
 			document.getElementById('shaker').classList.toggle("active");
@@ -63,52 +66,52 @@
 						<div class="card text-center">
 							<div class="ingredients">
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/apple.png" draggable="true" ondragstart="drag(event)" id="drag1">
-									<p>#Apple</p>
+									<img src="./images/fruits/apple.png" draggable="true" ondragstart="drag(event)" id="drag1" data-title_id="title1">
+									<p id="title1">#Apple</p>
 								</div>
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/strawberry.png" draggable="true" ondragstart="drag(event)" id="drag2">
-									<p>#Strawberry</p>
+									<img src="./images/fruits/strawberry.png" draggable="true" ondragstart="drag(event)" id="drag2" data-title_id="title2">
+									<p id="title2">#Strawberry</p>
 								</div>
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/bananas.png" draggable="true" ondragstart="drag(event)" id="drag3">
-									<p>#Banana</p>
+									<img src="./images/fruits/bananas.png" draggable="true" ondragstart="drag(event)" id="drag3" data-title_id="title3">
+									<p id="title3">#Banana</p>
 								</div>
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/avocado.png" draggable="true" ondragstart="drag(event)" id="drag4">
-									<p>#Avocado</p>
+									<img src="./images/fruits/avocado.png" draggable="true" ondragstart="drag(event)" id="drag4" data-title_id="title4">
+									<p id="title4">#Avocado</p>
 								</div>
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/pear.png" draggable="true" ondragstart="drag(event)" id="drag5">
-									<p>#Pear</p>
+									<img src="./images/fruits/pear.png" draggable="true" ondragstart="drag(event)" id="drag5" data-title_id="title5">
+									<p id="title5">#Pear</p>
 								</div>
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/blackberry.png" draggable="true" ondragstart="drag(event)" id="drag6">
-									<p>#Blackberry</p>
-								</div>
-
-								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/cherry.png" draggable="true" ondragstart="drag(event)" id="drag7">
-									<p>#Cherry</p>
+									<img src="./images/fruits/blackberry.png" draggable="true" ondragstart="drag(event)" id="drag6" data-title_id="title6">
+									<p id="title6">#Blackberry</p>
 								</div>
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/coconuts.png" draggable="true" ondragstart="drag(event)" id="drag8">
-									<p>#Coconut</p>
+									<img src="./images/fruits/cherry.png" draggable="true" ondragstart="drag(event)" id="drag7" data-title_id="title7">
+									<p id="title7">#Cherry</p>
 								</div>
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/grapefruit.png" draggable="true" ondragstart="drag(event)" id="drag9">
-									<p>#Grapefruit</p>
+									<img src="./images/fruits/coconuts.png" draggable="true" ondragstart="drag(event)" id="drag8" data-title_id="title8">
+									<p id="title8">#Coconut</p>
 								</div>
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/kiwi.png" draggable="true" ondragstart="drag(event)" id="drag10">
-									<p>#Kiwi</p>
+									<img src="./images/fruits/grapefruit.png" draggable="true" ondragstart="drag(event)" id="drag9" data-title_id="title9">
+									<p id="title9">#Grapefruit</p>
+								</div>
+
+								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+									<img src="./images/fruits/kiwi.png" draggable="true" ondragstart="drag(event)" id="drag10" data-title_id="title10">
+									<p id="title10">#Kiwi</p>
 								</div>
 
 							</div>
@@ -121,7 +124,7 @@
 							<img id="shaker" class="img-shaker mt-5 mx-auto d-block" src="./images/Blender.png">
 						</div>
 						<h2>Your Ingredients:</h2>
-						<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)"></div>
 						<form>
 							<input class="btn" type=button value="SHAKE IT!" onClick="shakeIt()">
 							<input class="btn" type=button value="Refresh" onClick="history.go()">
@@ -140,29 +143,30 @@
 						</div>
 						<div class="card text-center">
 							<div class="ingredients">
+
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/milk.png" draggable="true" ondragstart="drag(event)" id="drag11">
-									<p>#Milk</p>
+									<img src="./images/fruits/milk.png" draggable="true" ondragstart="drag(event)" id="drag11" data-title_id="title11">
+									<p id="title11">#Milk</p>
 								</div>
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/spinach.png" draggable="true" ondragstart="drag(event)" id="drag12">
-									<p>#Spinach</p>
+									<img src="./images/fruits/spinach.png" draggable="true" ondragstart="drag(event)" id="drag12" data-title_id="title12">
+									<p id="title12">#Spinach</p>
 								</div>
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/chocolate.png" draggable="true" ondragstart="drag(event)" id="drag13">
-									<p>#Chocolate</p>
+									<img src="./images/fruits/chocolate.png" draggable="true" ondragstart="drag(event)" id="drag13" data-title_id="title13">
+									<p id="title13">#Chocolate</p>
 								</div> 
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/honey.png" draggable="true" ondragstart="drag(event)" id="drag14">
-									<p>#Honey</p>
+									<img src="./images/fruits/honey.png" draggable="true" ondragstart="drag(event)" id="drag14" data-title_id="title14">
+									<p id="title14">#Honey</p>
 								</div>
 
 								<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/cream-nut.png" draggable="true" ondragstart="drag(event)" id="drag15">
-									<p>#Cream-nut</p>
+									<img src="./images/fruits/cream-nut.png" draggable="true" ondragstart="drag(event)" id="drag15" data-title_id="title15">
+									<p id="title15">#Cream-nut</p>
 								</div>
 							</div>
 						</div>
