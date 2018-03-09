@@ -5,8 +5,10 @@ body {
 
 #div2 {
 	padding: 45px 0 15px;
-	width: auto;
 	border: 1px solid #ddd;
+	height: 185px;
+	max-height: 800px;
+	overflow: scroll;
 }
 
 .wrapper {
@@ -21,64 +23,31 @@ body {
 	justify-content: space-around;
 }
 
-.shaker {	
-	padding: 45px 0 15px;
-	width: 49%;
-}
 
-
-.fruits a, .vegetables a {
+#div1 img, #div2 img {
 	display: block;
-	margin-top: 100px;
+	width: 220px;
+	height: 150px;
 }	
 
-
-.scroll {
-	margin-top: 170px; 
+.scroll { 
 	overflow: auto; 
-	height: 600px;
-	width: 25%;
-}
-
-@keyframes ants { to { background-position: 100% 100% } }
-
-.scroll {
 	padding: 1em;
-	border: 1px solid transparent;
-	background: linear-gradient(white, white) padding-box,
-	repeating-linear-gradient(-45deg, #ddd 0, #ddd 25%, transparent 0, transparent 50%) 0 / .6em .6em;
-	animation: ants 30s linear infinite;
+	max-height: 650px;
+	max-width: 250px;
 }
 
 h1 {	
 	margin: 10px auto;
-	font-size: 90px;
-	animation: 1s blink-1 3 steps(1);
-}
-
-@keyframes blink-1 { 50% { color: transparent } }
-@keyframes blink-2 { to { color: transparent } }
-
-::-webkit-scrollbar {
-	width: 12px;
-}
-
-::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-	border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	font-size: 80px;
+	text-align: center;
+	color: #555;
 }
 
 
 a {
 	cursor: pointer;
 }
-
-
 
 
 .slidecontainer {
@@ -118,37 +87,18 @@ a {
 }
 
 
-@keyframes shake {
-	0% { transform: translate(1px, 1px) rotate(0deg); }
-	10% { transform: translate(-1px, -2px) rotate(-1deg); }
-	20% { transform: translate(-3px, 0px) rotate(1deg); }
-	30% { transform: translate(3px, 2px) rotate(0deg); }
-	40% { transform: translate(1px, -1px) rotate(1deg); }
-	50% { transform: translate(-1px, 2px) rotate(-1deg); }
-	60% { transform: translate(-3px, 1px) rotate(0deg); }
-	70% { transform: translate(3px, 1px) rotate(-1deg); }
-	80% { transform: translate(-1px, -1px) rotate(1deg); }
-	90% { transform: translate(1px, 2px) rotate(0deg); }
-	100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-.img-shaker:hover, .img-shaker.active {   
-	animation: shake 0.5s;     
-	animation-iteration-count: infinite; 
-}
-
 @keyframes changeColors
 {
-	0% { color: #ff99cc; }
-	25% { color: #e06377; }
-	50% { color: #f9d5e5; }
-	100% { color: #eeac99; }
+	0% { color: #EEEB92; }
+	25% { color: #ECEA8C; }
+	50% { color: #E6E062; }
+	100% { color: #E4DD5F; }
 }
 
 #S, #M {
 	color: black;
 	animation-name: changeColors;
-	animation-duration: 10s;
+	animation-duration: 5s;
 	animation-direction: alternate;
 	animation-iteration-count: infinite
 }
@@ -171,7 +121,7 @@ h4, h3 {
 }
 
 .btn:hover {
-	background-color: #ddd;
+	background-color: #E4F6FD;
 	box-shadow: 1px 1px 3px 3px white;
 
 }
@@ -189,4 +139,52 @@ h4, h3 {
 
 #div1, #div2 {
 	cursor: pointer;
+}
+
+.fa-lemon {
+	color: #CCF6FF;
+	font-size: 30px;
+	box-shadow: 2px #ced4da;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.btn-outline-success:hover {
+	border: 1px solid #ddd;
+	color: #555;
+}
+
+.form-control {
+	color: #CCF6FF;
+}
+
+.img-shaker {
+	width: 100%;
+	height: 350px;
+}
+
+.card {
+	border: 1px solid white;
+}
+
+.card-shaker img {
+	width: 250px;
+	height: auto;
+	text-align: center;
+}
+
+.ingredients img {
+	margin-top: 25px;
 }

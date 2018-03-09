@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="/mixer.css">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
 	<title>Smoothie Maker</title>
@@ -22,7 +24,8 @@
 	</script>
 </head>
 <body>
-	<div class="wrapper">
+	<div class="container">
+
 		<div class="colour-mixer">
 			<div class="scroll">
 
@@ -57,15 +60,17 @@
 			</div>
 
 			<div class="shaker">
-				<h1><span id="S">S</span>moothie <span id="M">M</span>aker</h1>
-				<img id="shaker" class="img-shaker" src="./images/Blender.png" width="550" height="600">
+				<div class="card-title">
+					<p span id="S">S</span>moothie <span id="M">M</span>aker</p>
+				</div>
+				<img id="shaker" class="img-shaker" src="./images/Blender.svg">
 				<h2>Your Ingredients:</h2>
 				<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 				<form>
 					<input class="btn" type=button value="SHAKE IT!" onClick="shakeIt()">
 					<input class="btn" type=button value="Refresh" onClick="history.go()">
 				</form> 
-				
+
 			</div>
 			<div class="scroll">
 
@@ -75,7 +80,7 @@
 					<button class="btn" onclick="filterSelection('Blue')">Other</button>				
 				</div>
 
-				<div class="vegetables">
+				<div class="others">
 					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
 						<img src="./images/fruits/Cherry.png" draggable="true" ondragstart="drag(event)" id="drag4" width="150" height="150">
 					</div>
@@ -99,6 +104,7 @@
 
 			</div>
 		</div>
+
 	</div>
 
 </body>
