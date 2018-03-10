@@ -25,9 +25,12 @@
 			ev.target.appendChild(document.getElementById(titleId));
 			ev.target.appendChild(document.getElementById(imgId));
 		}
-		function shakeIt() {
-			document.getElementById('shaker').classList.toggle("active");
+
+		function showAlert() { 
+			var myText = "This can be whatever text you like!";
+			alert (myText);
 		}
+		
 	</script>
 
 </head>
@@ -126,7 +129,7 @@
 						<h2>Your Ingredients:</h2>
 						<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)"></div>
 						<form>
-							<input class="btn" type=button value="SHAKE IT!" onClick="shakeIt()">
+							<input class="btn" type=button value="SHAKE IT!" onClick="show.Alert()">
 							<input class="btn" type=button value="Refresh" onClick="history.go()">
 						</form> 
 
