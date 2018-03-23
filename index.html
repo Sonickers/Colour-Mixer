@@ -52,16 +52,16 @@
 									<p id="title1">#Apple</p>
 									<ul id="vitamins1">
 										<li class="first-vit">Vitamins:</li>
-										<li>Vitamin A</li>
-										<li>Vitamin B1</li>
-										<li>Vitamin B6</li>
-										<li>Vitamin C</li>
-										<li>Folate (folic acid)</li>
+										<li>Vitamin A - 98 IU </li>
+										<li>Vitamin B1 (thiamine) - 0.031 mg </li>
+										<li>Vitamin B2 (riboflavin) - 0.047 mg</li>
+										<li>Vitamin C - 8.4 mg </li>
+										<li>Vitamin E - 0.33 mg </li>
 									</ul>
 								</div>
 
 								<div id="div1" class="tile scale-anm fruits all" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/strawberry.png" draggable="true" ondragstart="drag(event)" id="drag2" data-title_id="title2">
+									<img src="./images/fruits/strawberry.png" draggable="true" ondragstart="drag(event)" id="drag2" data-title_id="title2" data-vitamins_id="vitamins2">
 									<p id="title2">#Strawberry</p>
 									<ul id="vitamins2">
 										<li class="first-vit">Vitamins:</li>
@@ -74,19 +74,44 @@
 								</div>
 
 								<div id="div1" class="tile scale-anm fruits all" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/bananas.png" draggable="true" ondragstart="drag(event)" id="drag3" data-title_id="title3">
+									<img src="./images/fruits/bananas.png" draggable="true" ondragstart="drag(event)" id="drag3" data-title_id="title3" data-vitamins_id="vitamins3">
 									<p id="title3">#Banana</p>
+									<ul id="vitamins3">
+										<li class="first-vit">Vitamins:</li>
+										<li>Vitamin A - 76 IU </li>
+										<li>Vitamin B1 (thiamine) - 0.037 mg </li>
+										<li>Vitamin B2 (riboflavin) - 0.086 mg </li>
+										<li>Niacin - 0.785 mg </li>
+										<li>Folate - 24 mcg </li>
+									</ul>
 								</div>
 
 								<div id="div1" class="tile scale-anm vegetables all" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/avocado.png" draggable="true" ondragstart="drag(event)" id="drag4" data-title_id="title4">
+									<img src="./images/fruits/avocado.png" draggable="true" ondragstart="drag(event)" id="drag4" data-title_id="title4" data-vitamins_id="vitamins4">
 									<p id="title4">#Avocado</p>
+									<ul id="vitamins4">
+										<li class="first-vit">Vitamins:</li>
+										<li>Vitamin A - 293 IU </li>
+										<li>Vitamin C - 20.1 mg</li>
+										<li>Vitamin B1 (thiamine) - 0.135 mg</li>
+										<li>Vitamin B2 (riboflavin) - 0.261 mg </li>
+										<li>Vitamin K - 42.2 mcg </li>
+									</ul>
 								</div>
 
 								<div id="div1" class="tile scale-anm fruits all" ondrop="drop(event)" ondragover="allowDrop(event)">
-									<img src="./images/fruits/pear.png" draggable="true" ondragstart="drag(event)" id="drag5" data-title_id="title5">
+									<img src="./images/fruits/pear.png" draggable="true" ondragstart="drag(event)" id="drag5" data-title_id="title5" data-vitamins_id="vitamins5">
 									<p id="title5">#Pear</p>
+									<ul id="vitamins5">
+										<li class="first-vit">Vitamins:</li>
+										<li>Vitamin A - 293 IU </li>
+										<li>Vitamin C - 20.1 mg</li>
+										<li>Vitamin B1 (thiamine) - 0.135 mg</li>
+										<li>Vitamin B2 (riboflavin) - 0.261 mg </li>
+										<li>Vitamin K - 42.2 mcg </li>
+									</ul>
 								</div>
+
 								<div id="div1" class="tile scale-anm fruits all" ondrop="drop(event)" ondragover="allowDrop(event)">
 									<img src="./images/fruits/blackberry.png" draggable="true" ondragstart="drag(event)" id="drag6" data-title_id="title6">
 									<p id="title6">#Blackberry</p>
@@ -194,9 +219,10 @@
 			var imgId = ev.dataTransfer.getData('imgId');
 			var titleId = ev.dataTransfer.getData('titleId');
 			var vitaminsId = ev.dataTransfer.getData('vitaminsId');
-			ev.target.appendChild(document.getElementById(titleId));
-			ev.target.appendChild(document.getElementById(imgId));
-			ev.target.appendChild(document.getElementById(vitaminsId));
+			var dropContainer = document.getElementById('div2');
+			dropContainer.appendChild(document.getElementById(titleId));
+			dropContainer.appendChild(document.getElementById(imgId));
+			dropContainer.appendChild(document.getElementById(vitaminsId));
 		}
 
 		$(function() {

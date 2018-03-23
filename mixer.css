@@ -4,7 +4,7 @@ body {
 }
 
 #div2 {
-	padding: 45px 0 15px;
+	/*padding: 45px 0 15px;*/
 	border: 1px solid #ddd;
 	height: 185px;
 	max-height: 800px;
@@ -90,9 +90,9 @@ a {
 @keyframes changeColors
 {
 	0% { color: #EEEB92; }
-	25% { color: #ECEA8C; }
-	50% { color: #E6E062; }
-	100% { color: #E4DD5F; }
+	25% { color: #FDFD7D; }
+	50% { color: #FDFD4F; }
+	100% { color: #99D11D; }
 }
 
 #S, #M {
@@ -206,10 +206,8 @@ h4, h3 {
 	list-style-type: none;
 }
 
-#div2 ul {
-	width: 100%;
-	cursor: default;
-	margin-bottom: -160px;   
+#div2 ul {	
+	cursor: default;	  
 	list-style-type: circle; 
 	cursor: default;	
 }
@@ -220,3 +218,8 @@ h4, h3 {
 	font-size: 20px;
 }
 
+#div2 p {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
