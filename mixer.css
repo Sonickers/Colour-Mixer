@@ -137,7 +137,7 @@ h4, h3 {
 	height: 10%;
 }
 
-#div1, #div2 {
+#div1 {
 	cursor: pointer;
 }
 
@@ -183,8 +183,40 @@ h4, h3 {
 	width: 250px;
 	height: auto;
 	text-align: center;
+	margin-bottom: 0px;
 }
 
 .ingredients img {
 	margin-top: 25px;
 }
+
+.tile { 
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: all 350ms ease;
+	transition: all 350ms ease;
+}
+
+.scale-anm {
+	transform: scale(1);
+}
+
+.ingredients ul {
+	display: none;
+	list-style-type: none;
+}
+
+#div2 ul {
+	width: 100%;
+	cursor: default;
+	margin-bottom: -160px;   
+	list-style-type: circle; 
+	cursor: default;	
+}
+
+#div2 .first-vit {
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 20px;
+}
+
