@@ -126,9 +126,9 @@ h4, h3 {
 }
 
 .btn.active {
-	background-color: #666;
+	background-color: #EFEFA1;
 	color: white;
-	font-size: 15px;
+	font-size: 17px;
 }
 
 #btnContainer {
@@ -232,4 +232,11 @@ input.extendable {
 
 input.extendable:focus {
 	width: 500px !important;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    color: white;
+    background-color: #8FC6D1;
+    box-shadow: none;
 }
