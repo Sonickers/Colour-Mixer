@@ -4,11 +4,10 @@ body {
 }
 
 #div2 {
-	/*padding: 45px 0 15px;*/
 	border: 1px solid #ddd;
-	height: 185px;
+	height: 250px;
 	max-height: 800px;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 .wrapper {
@@ -180,7 +179,7 @@ h4, h3 {
 }
 
 .card-shaker img {
-	width: 250px;
+	width: 210px;
 	height: auto;
 	text-align: center;
 	margin-bottom: 0px;
@@ -223,4 +222,14 @@ h4, h3 {
 	font-size: 35px;
 	font-weight: bold;
 	text-align: center;
+}
+
+input.extendable {
+	-webkit-transition: width 0.2s; /* Safari */
+    transition: width 0.2s;
+    width: 100px !important;
+}
+
+input.extendable:focus {
+	width: 500px !important;
 }

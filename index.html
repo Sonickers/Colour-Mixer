@@ -21,7 +21,7 @@
 			</ul>
 			<ul>
 				<form class="form-inline">
-					<input class="form-control mr-sm-2 justify-content-left" type="search" placeholder="Ingredient" aria-label="Search">
+					<input class="form-control mr-sm-2 justify-content-left extendable" type="search" placeholder="Ingredient" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Suggest</button>
 				</form>
 			</ul>
@@ -385,6 +385,7 @@
 			var rightCol = document.createElement('div');
 			
 			row.classList.add('row');
+			row.classList.add('m-0');
 			leftCol.classList.add('col');
 			rightCol.classList.add('col');
 			titleCol.classList.add('col-12');
@@ -405,17 +406,18 @@
 			$(".fil-cat").click(function() {
 				selectedClass = $(this).attr("data-rel");
 				var $this = $(this);
-				
-				$this.parents('.js-ingredient-container').find(".ingredients").fadeTo(100, 0.1);
-				$this.parents('.js-ingredient-container').find(".ingredients div")
+				var $ingredients = $this.parents('.js-ingredient-container').find(".ingredients");
+
+				$ingredients.fadeTo(100, 0.1);
+				$ingredients.find("div")
 				.not("." + selectedClass)
 				.fadeOut()
 				.removeClass("scale-anm");
 				setTimeout(function() {
-					$("." + selectedClass)
+					$ingredients.find("." + selectedClass)
 					.fadeIn()
 					.addClass("scale-anm");
-					$this.parents('.js-ingredient-container').find(".ingredients").fadeTo(300, 1);
+					$ingredients.fadeTo(300, 1);
 				}, 300);
 			});
 		});
