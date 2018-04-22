@@ -1,0 +1,11 @@
+{
+	"fruits": [
+	   {
+	   	"name": "apple",
+	   	"filename": "apple.png",
+	   	"vitaminA": "120ul",
+	   	"vitaminB": "",
+	   	"vitaminC": "",
+	   }
+	]
+}
